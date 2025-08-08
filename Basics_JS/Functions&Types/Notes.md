@@ -139,7 +139,7 @@ Executed **immediately** after its definition. Useful for private scope.
 - There are multiple ways to write and use functions in JavaScript.
 - Understand the **difference between declaration and expression**.
 - Learn and use **function types** based on your need: arrow, named, anonymous, or IIFE.
-![JS Function Declaration Diagram](./Basics_JS\Functions&Types\Notes.md "Function Declaration Breakdown")
+![JS Function Declaration Diagram](Basics_JS\Functions&Types\Function.png "Function Declaration Breakdown")
 
 
 ---
