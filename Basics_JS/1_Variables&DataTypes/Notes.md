@@ -1,6 +1,4 @@
-# 📘 JavaScript Variables and Data Types
-
-Welcome! This guide covers the key concepts of variables and data types in JavaScript.
+# 📘 JavaScript Variables and Data Types  
 
 ---
 

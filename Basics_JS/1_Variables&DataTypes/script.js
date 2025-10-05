@@ -7,8 +7,7 @@
 var name = "Sehrish";
 console.log(name); // Output: Sehrish
 
-// ✅ In JavaScript, variables declared with 'var' are hoisted —
-// meaning their declaration is moved to the top of the scope,
+// In JavaScript, variables declared with 'var' are hoisted —meaning their declaration is moved to the top of the scope,
 // so you can use the variable even before the 'var' statement.
 // For example:
 a = 35;
