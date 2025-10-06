@@ -53,3 +53,12 @@ do{
 ```
 
 ---
+# Difference: For, WHile, and Do While loop
+
+| **Aspect**                     | **For Loops**                                      | **While Loops**                                    | **Do While Loops**                                             |
+| ------------------------------ | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------- |
+| **Number of Iterations**       | Known and exact                                    | Condition-dependent                                | Condition-dependent                                            |
+| **Initialization Requirement** | Done explicitly in loop header                     | Done before the loop                               | Done before the loop                                           |
+| **Condition Evaluation**       | Before each iteration                              | Before each iteration                              | After executing the loop body                                  |
+| **Guaranteed Execution**       | Not guaranteed (may not run if condition is false) | Not guaranteed (may not run if condition is false) | Guaranteed at least once                                       |
+| **Best Use Case**              | When the number of iterations is known             | When you loop until a condition becomes false      | When you must run code at least once before checking condition |
