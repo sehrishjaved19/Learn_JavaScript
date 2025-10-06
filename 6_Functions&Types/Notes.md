@@ -1,7 +1,5 @@
 # 🔧 JavaScript Functions & Types of Functions
 
-Welcome! This guide will help you understand the concept of functions in JavaScript, their types, syntax, and how to use them effectively.
-
 ---
 
 ## ✅ What is a Function?
