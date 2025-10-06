@@ -24,34 +24,3 @@ console.log(age); // Output: 23
 const country = "Pakistan";
 // country = "India"; ❌ Error: Assignment to constant variable, contanct cannot be over write
 console.log(country); // Output: Pakistan
-
-
-// 🔹 Variable Naming Rules
-
-// Valid variable names
-let _user = "Ali";
-let $score = 100;
-let userName = "Sehrish";
-
-// Invalid (uncommenting will cause errors)
-// let 2num = 5; ❌
-// let my-name = "John"; ❌
-
-
-// 🔹 Primitive Data Types
-
-// String
-let city = "Lahore";
-console.log(typeof city); // string
-
-// Number
-let marks = 95.5;
-console.log(typeof marks); // number
-
-// Boolean
-let isPassed = true;
-console.log(typeof isPassed); // boolean
-
-// Undefined
-let x;
-console.log(typeof x); //
