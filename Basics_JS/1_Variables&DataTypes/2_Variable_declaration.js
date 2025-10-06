@@ -14,7 +14,6 @@ a = 35;
 console.log(a); // Output: 35
 var a;
 
-
 // Using let (Block-scoped)
 let age = 22;
 age = 23; // Reassignment is allowed

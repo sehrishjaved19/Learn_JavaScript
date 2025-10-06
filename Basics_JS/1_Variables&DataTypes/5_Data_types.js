@@ -18,3 +18,5 @@ console.log(typeof x); // Output: undefined
 
 let n = null;
 console.log(typeof n); // Output: object 
+
+// Const must me initialized while for let if we dont initialze only declare a variable i will give output as undefined while const throw an error.
