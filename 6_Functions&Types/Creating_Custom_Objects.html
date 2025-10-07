@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.getName = function() {
+        return this.make + ' ' + this.model + ' ' + this.year;
+    }}
+    var c = new Car ("Meridian", "Saber GT", 2021);
+    alert(c.getName());
+    </script>
+</body>
+</html>
