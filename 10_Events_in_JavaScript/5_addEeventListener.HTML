@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    <h1>click_eventlistener</h1>
+    <button id="myButton">Click me</button> check console to see log statement!
+    <script>
+    // Get the button element
+    const button = document.getElementById('myButton');
+    // Add event listener for 'click' event
+    button.addEventListener('click', handleButtonClick);
+    // Function to handle button click
+    function handleButtonClick() {
+        console.log('Button clicked!');//will be log on console
+    }
+    </script>
+
+    <hr>
+    <h1>click_eventlistener(Alert)</h1>
+    <button id="clickButton">Click Me!</button>
+    <script>
+    document.getElementById('clickButton').addEventListener('click', function() {
+    alert('Button clicked!');
+    });</script>
+
+    <hr>
+    <h1>MouseMove_show coordinates on console</h1>
+    <div id="moveArea" style="width: 200px; height: 200px; background-color: lightcoral;"> check console to see mouse coordinates</div>
+    <script>
+    const moveArea = document.getElementById('moveArea');
+    moveArea.addEventListener('mousemove', function(event) {
+        console.log(`Mouse coordinates - X: ${event.clientX}, Y: ${event.clientY}`);
+    });
+    </script>
+
+    <hr>
+    <h1>keydown_eventlistener</h1>
+    <p>check console</p>
+    <input type="text" id="keyInput">
+    <script>
+    const keyInput = document.getElementById('keyInput');
+    keyInput.addEventListener('keydown', function() {
+        console.log('Key pressed down!');
+    });
+    keyInput.addEventListener('keyup', function() {
+        console.log('Key released!');
+    });
+    </script>
+
+    <hr>
+
+    <h1>keypress_eventListener</h1>
+    <input type="text" id="pressInput">
+    <script>
+    const pressInput = document.getElementById('pressInput');
+    pressInput.addEventListener('keypress', function() {
+        console.log('Key pressed!');
+    });
+    </script>
+    <hr>
+    <h1>submit_EventListener</h1>
+    <form id="myForm">
+        <input type="text" id="textInput">
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission behavior
+    console.log('Form submitted!');
+    });
+    </script>
+    <hr>
+
+    <input type="text" id="textInput" placeholder="Click here">
+    <script>
+    const textInput = document.getElementById('textInput');
+    textInput.addEventListener('focus', function() {
+        console.log('Input focused');
+    });
+    textInput.addEventListener('blur', function() {
+        console.log('Input blurred');
+    });
+    </script>
+    <hr>
+
+    <script>
+    window.addEventListener('load', function() {
+        console.log('Page and all resources loaded');
+        });
+    </script>
+    <hr>
+    <div style="height: 500px; background-color: rgb(75, 199, 240);">
+    Scroll down</div>
+    <script>
+    window.addEventListener('scroll', function() {
+        console.log('Document scrolled');
+    });
+    </script>
+    <hr>
+    <script>
+    window.addEventListener('resize', function() {
+        console.log('Window resized');
+    });
+    </script>
+</body>
+</html>
