@@ -99,21 +99,3 @@ for (let key in object) {
 * **object →** the object (or array) you want to loop through.
 
 ---
-
-## ForEach Loop
-
-The forEach() method is a built-in array method used to execute a function once for each element in an array. It’s a simpler, cleaner way to loop through arrays when you just want to do something with each element — not return or modify the array.
-
-```js
-array.forEach(function(element, index, array) {
-  // code to execute
-});
-```
-
-### Explanation:
-
-| **Parameter**            | **Meaning**                             |
-| -------------------- | ----------------------------------- |
-| `element`            | The current element being processed |
-| `index` *(optional)* | The index of the current element    |
-| `array` *(optional)* | The entire array itself             |

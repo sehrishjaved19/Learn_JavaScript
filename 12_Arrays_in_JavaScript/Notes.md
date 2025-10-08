@@ -27,51 +27,144 @@ const myArray = ['element1','element2', 'so on...'];
 
 ---
 
-## Manipulation and Iterating Arrays
+## 💡 What Actually Is an **Array Method**?
 
-JavaScript offers several built-in array methods to manipulate arrays efficiently, such as push, pop, shift, unshift, splice, concact, slice, indexOf, reverse, sort, and length property. Let's explore them in detail. 
+An **Array Method** in JavaScript is simply a **built-in function** that you can use **on arrays** to:
 
-### Push Method
-The push method adds one or more elements to an array's ends and returns the array's new length. 
+* **Access** elements,
+* **Manipulate** (change, add, remove) elements,
+* **Transform** or **search** data.
 
-### Pop Method
-The pop method removes the last element from an array and returns that element.
+👉 Every array in JS (like `const arr = [1,2,3];`) has access to these methods because arrays are special **objects** with helpful **predefined functions**.
 
-### Shift Method
-The shift method removes the first element from an array and returns that element. 
+Example:
 
-### Unshift Method
-The unshift method adds one or more elements to an array's beginning, and returns the array's new link. 
-
-### Splice Method
-The splice changes the contents of an array by removing, replacing or adding elements at a specific position. 
 ```js
-array.splice(start, deleteCount, item1, item2, ...)
+const fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits.length);      // Property (not a method)
+fruits.push("Mango");            // Method (adds an element)
+console.log(fruits);
 ```
-#### Explanation
 
-| Parameter           | Description                                    |
-| ------------------- | ---------------------------------------------- |
-| `start`             | The index where changes begin                  |
-| `deleteCount`       | Number of elements to remove                   |
-| `item1, item2, ...` | (Optional) Elements to add starting at `start` |
+**Output:**
+
+```
+["Apple", "Banana", "Cherry", "Mango"]
+```
+
+Here, `.push()` is an **array method** — a function designed specifically to work on arrays.
+
+---
+
+## 🔹 Two Main Categories of Array Methods
+
+There are **two major types** of array methods in JavaScript:
+
+| Type                                | Description                                                  | Examples                                                                     |
+| ----------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| 🧩 **Non-Manipulating (Immutable)** | Don’t change the original array — they create a **new** one. | `map()`, `filter()`, `concat()`, `slice()`, `find()`, `reduce()`             |
+| 🛠️ **Manipulating (Mutable)**      | Directly **change (mutate)** the original array.             | `push()`, `pop()`, `shift()`, `unshift()`, `splice()`, `sort()`, `reverse()` |
+
+---
+
+## 🔸 **Manipulating Array Methods (Mutable)**
+
+These **modify the original array**.
+
+| Method      | Description                                | Example                      |
+| ----------- | ------------------------------------------ | ---------------------------- |
+| `push()`    | Adds element **to the end**                | `arr.push("Mango")`          |
+| `pop()`     | Removes **last element**                   | `arr.pop()`                  |
+| `shift()`   | Removes **first element**                  | `arr.shift()`                |
+| `unshift()` | Adds element **to the start**              | `arr.unshift("Apple")`       |
+| `splice()`  | Adds/removes elements from any position    | `arr.splice(2, 1, "Orange")` |
+| `sort()`    | Sorts elements (alphabetically by default) | `arr.sort()`                 |
+| `reverse()` | Reverses the array order                   | `arr.reverse()`              |
+
+**Example:**
+
+```js
+let numbers = [1, 2, 3];
+numbers.push(4);
+numbers.shift();
+console.log(numbers); // [2, 3, 4]
+```
+
+✅ Original array is changed.
+
+---
+
+## 🔹 **Non-Manipulating (Immutable) Array Methods**
+
+These do **not** change the original array — they return a **new array** or value.
+
+| Method      | Description                                  | Returns                 |
+| ----------- | -------------------------------------------- | ----------------------- |
+| `map()`     | Runs a function on each element              | New array               |
+| `filter()`  | Keeps elements that match a condition        | New array               |
+| `reduce()`  | Reduces array to a single value              | Single value            |
+| `concat()`  | Joins two or more arrays                     | New array               |
+| `slice()`   | Extracts part of an array                    | New array               |
+| `find()`    | Returns first element that matches condition | Single value            |
+| `forEach()` | Executes a function on each element          | `undefined` (no return) |
+
+---
+
+## 🔸 **Examples**
+
+### 🧩 `map()` → Transform each element
+
+```js
+const nums = [1, 2, 3];
+const squares = nums.map(num => num * num);
+console.log(squares); // [1, 4, 9]
+```
+
+### 🧩 `filter()` → Keep elements that pass a test
+
+```js
+const nums = [10, 25, 30, 40];
+const result = nums.filter(n => n > 20);
+console.log(result); // [25, 30, 40]
+```
+
+### 🧩 `reduce()` → Combine all into one value
+
+```js
+const nums = [1, 2, 3, 4];
+const sum = nums.reduce((acc, num) => acc + num, 0);
+console.log(sum); // 10
+```
+
+---
+
+## 🔸 **forEach()**
+
+`forEach()` is a **looping method** — it **executes** a function for every array element but does **not return anything**.
+
+```js
+const fruits = ["Apple", "Banana", "Mango"];
+fruits.forEach(fruit => console.log(fruit));
+```
+
+---
+### Key Point(difference between filter and find)
+
+| Method     | Purpose                                                                        |
+| ---------- | ------------------------------------------------------------------------------ |
+| `filter()` | Returns **all** elements that match a condition (in a **new array**)           |
+| `find()`   | Returns **the first** element that matches a condition (as a **single value**) |
 
 
-### Concat Method
-The concat method combines two or more arrays to create a new array without modifying the original ones.
+---
 
-### Slice Method
-The slice method returns a shallow copy of a portion of an array into a new array without modifying the original content.
+## 🔹 Summary Chart
 
-### indexOf Method
-The indexOf method finds the index of a specified element within an array. It returns the index of the first occurrence of the element, or minus one, if it is not able to find the element. 
+| Category                         | Changes Original? | Example Methods                                  |
+| -------------------------------- | ----------------- | ------------------------------------------------ |
+| **Manipulating (Mutable)**       | ✅ Yes             | push, pop, shift, unshift, splice, sort, reverse |
+| **Non-Manipulating (Immutable)** | ❌ No              | map, filter, reduce, slice, concat, find         |
+| **Iteration (Looping)**          | ❌ No (usually)    | forEach, for...of, for...in                      |
 
-### Reverse Method
-The reverse method reverses the order of elements, effectively reversing the array in place. 
-
-### Sort Method
-The sort method is used to sort the elements of an array. By default, it sorts elements as strings and in lexicographic order, to sort numbers correctly, you can provide a comparison function.
-
-### Length Property
-The length property returns the number of elements in the array. You can use it to determine the size, or to resize an array by changing its length. 
+---
 
