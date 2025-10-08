@@ -167,4 +167,5 @@ fruits.forEach(fruit => console.log(fruit));
 | **Iteration (Looping)**          | ❌ No (usually)    | forEach, for...of, for...in                      |
 
 ---
-
+## Two Dimensional Array
+A 2D array, also known as a two-dimensional array, is collection of elements organized in rows and columns. 
