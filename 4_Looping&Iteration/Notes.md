@@ -34,6 +34,7 @@ for(initialization; condition; update){
 }
 ```
 ---
+
 ## while loop
 **A while loop is a control structure in JavaScript that allows you to execute a block of code repeatedly. As long as the specified condition is true, it continually evaluates the condition before each iteration.**
 
@@ -43,6 +44,7 @@ while(condition){
 }
 ```
 ---
+
 ## Do While loop
 **A do while loop in JavaScript is a control structure that allows you to execute a block of code repeatedly as long as a specified condition is true. Unlike the for or while loops, a do while loop guarantees that the code block will execute at least once, even if the condition is initially false**
 
@@ -53,6 +55,7 @@ do{
 ```
 
 ---
+
 # Difference: For, WHile, and Do While loop
 
 | **Aspect**                     | **For Loops**                                      | **While Loops**                                    | **Do While Loops**                                             |
@@ -62,3 +65,55 @@ do{
 | **Condition Evaluation**       | Before each iteration                              | Before each iteration                              | After executing the loop body                                  |
 | **Guaranteed Execution**       | Not guaranteed (may not run if condition is false) | Not guaranteed (may not run if condition is false) | Guaranteed at least once                                       |
 | **Best Use Case**              | When the number of iterations is known             | When you loop until a condition becomes false      | When you must run code at least once before checking condition |
+
+---
+
+## For Of Loop
+The for...of loop in JavaScript is used to iterate over iterable objects — like arrays, strings, sets, maps, or any object that implements the iterable protocol — and it gives you the values directly, not the indexes.
+
+```js
+for (let variable of iterable) {
+  // code to execute for each value
+}
+```
+### Explanation:
+
+* **variable →** a new variable (or existing one) to store each element’s value.
+
+* **Iterable →** the data structure you want to loop through (e.g. array, string)
+
+---
+
+## For In Loop
+The for...in loop is used to iterate over the keys (property names or indexes) of an object or array. It goes through enumerable properties, meaning the ones that can be listed (like object keys or array indexes).
+
+```js
+for (let key in object) {
+  // code to execute for each property
+}
+```
+### Explanation:
+
+* **key →** a variable that holds the property name or index.
+
+* **object →** the object (or array) you want to loop through.
+
+---
+
+## ForEach Loop
+
+The forEach() method is a built-in array method used to execute a function once for each element in an array. It’s a simpler, cleaner way to loop through arrays when you just want to do something with each element — not return or modify the array.
+
+```js
+array.forEach(function(element, index, array) {
+  // code to execute
+});
+```
+
+### Explanation:
+
+| **Parameter**            | **Meaning**                             |
+| -------------------- | ----------------------------------- |
+| `element`            | The current element being processed |
+| `index` *(optional)* | The index of the current element    |
+| `array` *(optional)* | The entire array itself             |
