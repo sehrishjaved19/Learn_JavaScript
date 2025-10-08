@@ -1,6 +1,7 @@
 //Creating an Array
 const fruits = ["Apple", "Banana", "Cherry"];
 console.log(fruits);
+console.log(typeof fruits); //object
 
 //Accessing Elements of Array
 const firstfruit = fruits[0];
