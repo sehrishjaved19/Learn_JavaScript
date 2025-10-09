@@ -139,5 +139,7 @@ Executed **immediately** after its definition. Useful for private scope.
 - Learn and use **function types** based on your need: arrow, named, anonymous, or IIFE.
 ![JS Function Declaration Diagram](Basics_JS\Functions&Types\Function.png "Function Declaration Breakdown")
 
-
 ---
+
+## Prototypes 
+_**Prototypes allow you to easily define properties and methods for all instances of a particular object. All JavaScript objects which can be created with the new keyword inherit properties and methods from a prototype.**_
