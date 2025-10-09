@@ -36,4 +36,23 @@ _**Function constructors are regular JavaScript functions used to create and ini
 | **Applicability** | Adaptable for various scnerious | Especially useful for object-oriented programming in JavaScript |
 
 ---
+## Accessing Object Properties
+* In JavaScript, you can access objects and their properties using dot or bracket notations.
+
+### Dot Notation
+**Dot notation is the most common way to access object properties. You use a dot followed by the property name.**
+
+### Bracket Notation
+**Bracket notation is also handy when you need to access properties dynamically, such as with variables.**
+
+#### Note:
+* Both dot and bracket notation serve the same purpose, accessing object properties. You can choose the one that best suits your needs and coding style.
+
+---
+## Array of Object
+**An array of objects is a common and powerful way to store and manage structured data in JavaScript. They allow you to organize and manipulate data in a structured manner by combining the features of both arrays and objects.**
+
+
+
+
 
