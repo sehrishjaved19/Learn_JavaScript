@@ -15,14 +15,14 @@ _**Objects are specific instances of a class created based on the class blueprin
 ---
 
 ## Object Literals
-**_Object literals are a way to create ad hoc objects without defining a class._**
+_**Object literals are a way to create ad hoc objects without defining a class.**_
 
 * Ad hoc objects are objects created for a specific, temporary purpose — usually to hold or manipulate data on the fly — rather than being part of a predefined class or structure.
 
 ---
 
 ## Function Constuctors
-**_ Function constructors are regular JavaScript functions used to create and initialize objects. It's a convention to name functional constructors with an initial capital letter._**
+_**Function constructors are regular JavaScript functions used to create and initialize objects. It's a convention to name functional constructors with an initial capital letter.**_
 
 ---
 
