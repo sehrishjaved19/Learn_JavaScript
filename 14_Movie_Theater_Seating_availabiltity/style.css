@@ -1,0 +1,50 @@
+/* ===== Seating Layout Styles ===== */
+.seating_Chart {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.seat {
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #4d034c;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: 0.3s ease;
+}
+.seat:hover {
+    transform: scale(1.05);
+}
+.booked {
+    background-color: #ff000087;
+    cursor: not-allowed;
+    color: rgb(66, 2, 2);
+}
+.available {
+    background-color: #ff57d2;
+}
+.select-button {
+    display: block;
+    width: 230px;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #72055e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.select-button:hover {
+    background-color: #0056b3;
+}
+h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}

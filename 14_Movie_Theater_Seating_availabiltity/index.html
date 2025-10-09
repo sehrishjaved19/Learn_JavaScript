@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Theater Seating Arrangement</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>🎟️ Movie Theater Seating Arrangement</h2>
+
+  <!-- Seating Chart -->
+  <div id="seating_Chart" class="seating_Chart">
+    <div class="seat available" onclick="bookSeat(0,0)">A1</div>
+    <div class="seat available" onclick="bookSeat(0,1)">A2</div>
+    <div class="seat available" onclick="bookSeat(0,2)">A3</div>
+
+    <div class="seat available" onclick="bookSeat(1,0)">B1</div>
+    <div class="seat available" onclick="bookSeat(1,1)">B2</div>
+    <div class="seat available" onclick="bookSeat(1,2)">B3</div>
+
+    <div class="seat available" onclick="bookSeat(2,0)">C1</div>
+    <div class="seat available" onclick="bookSeat(2,1)">C2</div>
+    <div class="seat available" onclick="bookSeat(2,2)">C3</div>
+  </div>
+
+  <button class="select-button" onclick="bookRandomSeat()">🎲 Book Random Seat</button>
+  <script src="script.js"></script>
+</body>
+</html>

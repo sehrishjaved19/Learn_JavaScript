@@ -168,4 +168,9 @@ fruits.forEach(fruit => console.log(fruit));
 
 ---
 ## Two Dimensional Array
-A 2D array, also known as a two-dimensional array, is collection of elements organized in rows and columns. 
+**A 2D array, also known as a two-dimensional array, is collection of elements organized in rows and columns.** 
+
+* Each element in a 2D array is accessed using two indices, one for the row and another for the column. 
+
+### Creating a 2D Array
+In JavaScript, you can create a 2D array by initializing an array of arrays.
