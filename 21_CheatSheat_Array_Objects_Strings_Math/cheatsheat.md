@@ -1,0 +1,56 @@
+# Cheatsheet: JavaScript Reference (Arrays, Objects, Strings & Math)
+| **JavaScript Concept / Method** | **Description**                                                              | **Code Example**                                                                    |   |   |
+| ------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | - | - |
+| **Array**                       | Used to store multiple values in a single variable.                          | `js const fruits = ["apple", "banana", "cherry"]; console.log(fruits[0]); // apple` |   |   |
+| **Array Length**                | Returns the number of elements in an array.                                  | `js const fruits = ["apple", "banana", "cherry"]; console.log(fruits.length);`      |   |   |
+| **push()**                      | Adds one or more elements to the end of an array.                            | `js fruits.push("mango");`                                                          |   |   |
+| **pop()**                       | Removes the last element from an array.                                      | `js fruits.pop();`                                                                  |   |   |
+| **shift()**                     | Removes the first element from an array.                                     | `js fruits.shift();`                                                                |   |   |
+| **unshift()**                   | Adds one or more elements to the beginning of an array.                      | `js fruits.unshift("kiwi");`                                                        |   |   |
+| **concat()**                    | Merges two or more arrays.                                                   | `js const arr3 = arr1.concat(arr2);`                                                |   |   |
+| **indexOf()**                   | Returns the first index of a specified element.                              | `js fruits.indexOf("banana");`                                                      |   |   |
+| **includes()**                  | Checks if an array includes a specific element.                              | `js fruits.includes("apple");`                                                      |   |   |
+| **slice()**                     | Returns selected elements from an array without modifying it.                | `js fruits.slice(1, 3);`                                                            |   |   |
+| **splice()**                    | Adds/removes elements from an array.                                         | `js fruits.splice(1, 0, "grape");`                                                  |   |   |
+| **forEach()**                   | Executes a function for each array element.                                  | `js fruits.forEach(fruit => console.log(fruit));`                                   |   |   |
+| **map()**                       | Creates a new array with the results of calling a function for each element. | `js const doubled = numbers.map(n => n * 2);`                                       |   |   |
+| **filter()**                    | Creates a new array with all elements that pass a test.                      | `js const result = numbers.filter(n => n > 5);`                                     |   |   |
+| **reduce()**                    | Reduces array values into a single value.                                    | `js const sum = numbers.reduce((a, b) => a + b);`                                   |   |   |
+| **find()**                      | Returns the first element that satisfies the test function.                  | `js const found = numbers.find(n => n > 5);`                                        |   |   |
+| **sort()**                      | Sorts the elements of an array.                                              | `js numbers.sort((a, b) => a - b);`                                                 |   |   |
+| **reverse()**                   | Reverses the order of array elements.                                        | `js fruits.reverse();`                                                              |   |   |
+| **Object**                      | Used to store key–value pairs.                                               | `js const person = {name: "John", age: 25};`                                        |   |   |
+| **Access Object Property**      | Use dot or bracket notation to access values.                                | `js console.log(person.name); console.log(person["age"]);`                          |   |   |
+| **Add / Update Property**       | You can add or update properties directly.                                   | `js person.city = "London"; person.age = 26;`                                       |   |   |
+| **Delete Property**             | Removes a property from an object.                                           | `js delete person.age;`                                                             |   |   |
+| **Object.keys()**               | Returns an array of object keys.                                             | `js Object.keys(person);`                                                           |   |   |
+| **Object.values()**             | Returns an array of object values.                                           | `js Object.values(person);`                                                         |   |   |
+| **Object.entries()**            | Returns an array of key–value pairs.                                         | `js Object.entries(person);`                                                        |   |   |
+| **hasOwnProperty()**            | Checks if an object has a specific property.                                 | `js person.hasOwnProperty("name");`                                                 |   |   |
+| **for...in**                    | Loops through object properties.                                             | `js for(let key in person){console.log(key, person[key]);}`                         |   |   |
+| **String**                      | Used to store text data.                                                     | `js const msg = "Hello World";`                                                     |   |   |
+| **String Length**               | Returns number of characters in string.                                      | `js msg.length;`                                                                    |   |   |
+| **toUpperCase()**               | Converts string to uppercase.                                                | `js msg.toUpperCase();`                                                             |   |   |
+| **toLowerCase()**               | Converts string to lowercase.                                                | `js msg.toLowerCase();`                                                             |   |   |
+| **charAt()**                    | Returns character at specified index.                                        | `js msg.charAt(0);`                                                                 |   |   |
+| **indexOf()**                   | Returns index of first occurrence.                                           | `js msg.indexOf("o");`                                                              |   |   |
+| **includes()**                  | Checks if substring exists.                                                  | `js msg.includes("Hello");`                                                         |   |   |
+| **slice()**                     | Extracts a section of a string.                                              | `js msg.slice(0, 5);`                                                               |   |   |
+| **substring()**                 | Similar to slice but doesn’t accept negative indexes.                        | `js msg.substring(0, 5);`                                                           |   |   |
+| **replace()**                   | Replaces part of a string with another string.                               | `js msg.replace("Hello", "Hi");`                                                    |   |   |
+| **trim()**                      | Removes whitespace from both ends.                                           | `js msg.trim();`                                                                    |   |   |
+| **split()**                     | Splits a string into an array.                                               | `js msg.split(" ");`                                                                |   |   |
+| **concat() (String)**           | Joins two or more strings.                                                   | `js "Hello".concat(" ", "World");`                                                  |   |   |
+| **Template Literals**           | Allows embedding variables inside strings.                                   | `` `Hello ${name}` ``                                                               |   |   |
+| **Math Object**                 | Used for mathematical operations.                                            | `js Math.PI; Math.round(4.7);`                                                      |   |   |
+| **Math.round()**                | Rounds to nearest integer.                                                   | `js Math.round(4.7);`                                                               |   |   |
+| **Math.floor()**                | Rounds down to nearest integer.                                              | `js Math.floor(4.7);`                                                               |   |   |
+| **Math.ceil()**                 | Rounds up to nearest integer.                                                | `js Math.ceil(4.3);`                                                                |   |   |
+| **Math.pow()**                  | Raises base to exponent.                                                     | `js Math.pow(2, 3); // 8`                                                           |   |   |
+| **Math.sqrt()**                 | Returns square root.                                                         | `js Math.sqrt(16);`                                                                 |   |   |
+| **Math.random()**               | Returns random number between 0 and 1.                                       | `js Math.random();`                                                                 |   |   |
+| **Math.min() / Math.max()**     | Returns minimum or maximum value.                                            | `js Math.min(3,7,1); Math.max(3,7,1);`                                              |   |   |
+| **Math.abs()**                  | Returns absolute (positive) value.                                           | `js Math.abs(-5);`                                                                  |   |   |
+| **Math.trunc()**                | Removes fractional digits.                                                   | `js Math.trunc(4.9);`                                                               |   |   |
+
+---
