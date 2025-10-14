@@ -5,7 +5,7 @@ console.log(fruits);
 
 console.log(fruits.map(x => x+" G"));// Create a new array after applying a function
 
-console.log(fruits.filter(x => x=="Banana"));// Runs array of elements thst match a condition
+console.log(fruits.filter(x => x=="Banana"));// Runs array of elements that match a condition
 
 console.log(fruits.indexOf("Pear"));//returns 1(the first occurance of "Pear")
 
