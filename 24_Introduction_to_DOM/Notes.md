@@ -17,17 +17,16 @@ The document object model, or DOM, is a programming interface for web documents.
 When a web page is loaded in a browser, the browser creates a DOM representation of the page's structure. It forms a hierarchical tree structure with the document's root as the top node. Document node is the top level node representing the entire web page. Element nodes represent HTML elements such as div, p, a, and form the bulk of the DOM structure. Attribute nodes represent attributes of HTML elements including id, class, and src. Text nodes contain the text content within elements.
 
 # DOM Structure
-```mermaid
-graph TD;
-    A[document] --> B[html];
-    B --> C[head];
-    B --> D[body];
-    C --> E[title];
-    D --> F[input#input1];
-    D --> G[input#input2];
-    D --> H[button onclick="performOperation()"];
-    D --> I[p#result];
-```
+document
+│
+└── html
+    ├── head
+    │   └── title
+    └── body
+        ├── input#input1
+        ├── input#input2
+        ├── button (onclick="performOperation()")
+        └── p#result
 
 
 ## $0 Variable
