@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+    <style>
+        #image-div {
+            width: 285px; 
+            height:fit-content;
+            border: solid black 2px ;
+        }
+    </style>
+</head>
+<body>
+    <p id="my-paragraph">This is some text.</p>
+
+    <div id = "image-div">
+        <img id="my-image" src="old_DOM.png" alt="old_DOM">
+    </div>
+
+    <ul id="my-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <button id="my-button">switch color</button>
+
+    <div id="my-container">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+    </div>
+    <!--JavaScript Code-->
+    <script>
+        const updatedContent = document.getElementById("my-paragraph").textContent = 'This is the updated paragraph.';
+
+        const image = document.getElementById("my-image");
+        image.setAttribute('src', 'DOM.png');
+
+        const list = document.getElementById('my-list');
+        const newItem = document.createElement('li');
+        newItem.textContent = 'Item 3';
+        list.appendChild(newItem);
+        
+        const button = document.getElementById('my-button');
+        button.addEventListener('click', function(){
+            alert('Button Clicked!');
+        });
+
+        const container = document.getElementById('my-container');
+        const secondParagraph = container.querySelector('p:nth-child(2)');
+        container.insertBefore(secondParagraph, container.querySelector('p'));
+
+        const new_list =document.getElementById('my-list');
+        const firstItem = new_list.querySelector('li');
+        const clonedItem = firstItem.cloneNode(true);
+        new_list.appendChild(clonedItem);
+    </script>
+</body>
+</html>
