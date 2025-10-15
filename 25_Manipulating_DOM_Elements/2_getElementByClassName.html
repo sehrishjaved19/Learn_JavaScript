@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByClassName</title>
+</head>
+<body>
+    <p class="highlighted">This is highlighted paragraph.</p>
+    <p class="highlighted">This is another highlighted paragraph.</p>
+    <p>This is regular paragraph.</p>
+    <!--JavaScript Code-->
+    <script>
+        //Access element with the class name 'highlighted' using getElementByClassName
+        const highlightedElements = document.getElementsByClassName('highlighted');
+
+        // Modify the text content of each element
+        for (let i = 0; i < highlightedElements.length; i++) {
+            highlightedElements[i].textContent = 'This paragraph is highlighted!🤷‍♂️';
+        }
+    </script>
+</body>
+</html>
