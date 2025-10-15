@@ -21,3 +21,8 @@
 
 ### querySelector
 **querySelector is a versatile method in JavaScript used to access HTML elements within the DOM based on CSS-like selectors.**
+
+---
+
+## Manipulating DOM Elements
+**Manipulating elements using the DOM refers to changing the structure, content, attributes, or styles of HTML elements within a web page.**
