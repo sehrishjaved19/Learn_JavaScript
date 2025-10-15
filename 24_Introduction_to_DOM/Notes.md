@@ -15,7 +15,7 @@ The document object model, or DOM, is a programming interface for web documents.
 
 ### how DOM works?
 When a web page is loaded in a browser, the browser creates a DOM representation of the page's structure. It forms a hierarchical tree structure with the document's root as the top node. Document node is the top level node representing the entire web page. Element nodes represent HTML elements such as div, p, a, and form the bulk of the DOM structure. Attribute nodes represent attributes of HTML elements including id, class, and src. Text nodes contain the text content within elements.
-
+```
 # DOM Structure
 document
 │
@@ -27,10 +27,74 @@ document
         ├── input#input2
         ├── button (onclick="performOperation()")
         └── p#result
-
+```
 
 ## $0 Variable
 **$0 is a special variable that you can use in the browser's development console as a quick reference to the currently selected DOM element in the elements panel in web development.**
 
 * It is often used for debugging and inspecting elements in a web page. 
 
+## Types of Nodes
+
+### 1. Document Node
+Represents the **entire HTML document**.  
+Access it using:
+```js
+var documentNode = document;
+documentNode; // Shows the entire document object
+```
+
+### 2. Element Node
+
+Represents an **HTML element**.
+Example:
+```js
+$0; // Outputs the selected <p> or <div> element
+```
+
+### 3. Text Node
+
+Represents the **text content** within an element.
+Example:
+```js
+$0.textContent; // Returns the text content of the selected element
+```
+
+### 4. Attribute Node
+
+Represents an element’s **attributes**.
+Example:
+```js
+$0.getAttribute("href");
+// Returns the value of the 'href' attribute
+```
+
+### 5. Comment Node
+
+Represents an **HTML comment** within the document.
+Example (accessing a comment inside an element with id="myDiv"):
+```js
+var commentNode = document.getElementById("myDiv").childNodes[0];
+var commentContent = commentNode.nodeValue;
+```
+
+### 6. Document Type Node
+
+Represents the **DOCTYPE declaration**(<!DOCTYPE html>).
+Example:
+```js
+document.doctype; // Returns the document type node
+```
+---
+
+## Need of DOM
+* Structured access of web content
+* Dynamic and interactive web applications
+* Content Manipulation
+* Cross- browser compatibility
+* Real-Time updates
+* Event handling
+* Accessibility
+* User experience enhancement
+
+---
