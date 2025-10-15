@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector Example</title>
+</head>
+<body>
+    <p class="highlighted">This is a highlighted paragrapg.</p>
+    <p id="my-paragraph">This is a paragrapg with an ID</p>
+    <div>This is a regular paragraph.</div>
+
+    <!--JavaScript Code-->
+    <script>
+        // Select the element with the class 'highlighted' using querySelector
+        const elementByClass = document.querySelector('.highlighted');
+        console.log(elementByClass); //log the selected element to the console
+
+        // Select the element with the ID 'my-paragrapg' using querySelector
+        const elementByID = document.querySelector('#my-paragraph');
+        console.log(elementByID);//log the selected element to the console
+
+        //Select the first <p> element using querySelector
+        const elementByTag = document.querySelector('div');
+        console.log(elementByTag);//log the selected element to the console
+    </script>
+</body>
+</html>
