@@ -78,7 +78,7 @@ The **`window`** object serves as the **root** of the BOM and provides access to
   <button onclick="window.location.href='https://www.google.com'">Go to Google</button>
 </body>
 </html>
-````
+```
 
 ---
 
