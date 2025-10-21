@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element ClassList Example</title>
+</head>
+<body>
+    <!-- Add, Remove, and toggle CSS classes -->
+    <div id="myDiv" class="active">This is a div</div>
+    <button id="myButton">Toggle Class</button>
+    <!-- JavaScript -->
+     <script>
+        const div = document.getElementById("myDiv");
+        const button = document.getElementById("myButton");
+
+        function toggleClassAndColor() {
+            div.classList.toggle("active");
+            div.classList.toggle("inactive");
+            
+            // Check if the "active" class is present and achange the background color accordingly
+            if (div.classList.contains("active")) {
+                div.style.backgroundColor = "pink";
+            }
+            else {
+                div.style.backgroundColor = "orange";
+            }
+        }
+        button.addEventListener("click", toggleClassAndColor);
+     </script>
+     
+</body>
+</html>

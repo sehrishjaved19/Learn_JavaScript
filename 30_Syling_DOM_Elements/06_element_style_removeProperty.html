@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Style Remove Property Example</title>
+</head>
+<body>
+    <!-- Remove CSS properties from the inline style -->
+    <p id="myParagraph" style="color:blue; font-size:18px;">This is a styled paragraph.</p>
+
+    <!-- JavaScript -->
+    <script>
+        const paragraph = document.getElementById("myParagraph");
+        paragraph.style.removeProperty("font-size");
+    </script>
+</body>
+</html>
