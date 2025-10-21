@@ -34,6 +34,99 @@ document
 
 * It is often used for debugging and inspecting elements in a web page. 
 
+
+## 🧩 What is a Node?
+
+In the **DOM**, *everything* inside an HTML document is represented as a **node** —
+elements, text, comments, and even the document itself.
+
+Example HTML:
+
+```html
+<div>
+  <p>Hello</p>
+</div>
+```
+
+DOM Tree (simplified):
+
+```
+#document                ← Document node
+ └── <html>              ← Element node
+      └── <body>         ← Element node
+           └── <div>     ← Element node
+                └── <p>  ← Element node
+                     └── "Hello"  ← Text node
+```
+
+---
+
+## 🧠 What is `nodeType`?
+
+Each node in the DOM has a property called `.nodeType`
+which tells you **what kind of node** it is — using a **numeric code**.
+
+---
+
+### 🔢 Common Node Types
+
+| Node Type | Constant Name        | Description                       | Example                |
+| --------- | -------------------- | --------------------------------- | ---------------------- |
+| `1`       | `ELEMENT_NODE`       | Any HTML element                  | `<div>`, `<p>`, `<h1>` |
+| `3`       | `TEXT_NODE`          | Text inside elements              | `"Hello"`              |
+| `8`       | `COMMENT_NODE`       | Comment in HTML                   | `<!-- comment -->`     |
+| `9`       | `DOCUMENT_NODE`      | The whole document                | `document`             |
+| `10`      | `DOCUMENT_TYPE_NODE` | The `<!DOCTYPE html>` declaration | `<!DOCTYPE html>`      |
+
+---
+
+### 🔍 Example in JavaScript
+
+```js
+const p = document.querySelector("p");
+console.log(p.nodeType);           // 1 (ELEMENT_NODE)
+console.log(p.firstChild.nodeType); // 3 (TEXT_NODE)
+```
+
+If your HTML is:
+
+```html
+<p>Hello</p>
+```
+
+Then:
+
+* `p` → element node → `nodeType` = `1`
+* `p.firstChild` → text node `"Hello"` → `nodeType` = `3`
+
+---
+
+### 💡 Why it matters
+
+You can use `nodeType` to:
+
+* Differentiate between **text** and **element** nodes
+* Avoid accidentally handling whitespace or comments
+* Write clean DOM traversal code
+
+Example:
+
+```js
+if (node.nodeType === 1) {
+  console.log("This is an element node");
+}
+```
+
+---
+
+### ✅ Summary
+
+| Property       | Meaning                                            |
+| -------------- | -------------------------------------------------- |
+| `.nodeType`    | A numeric value indicating what kind of node it is |
+| `.nodeName`    | The node’s name (`DIV`, `P`, `#text`, `#comment`)  |
+| `.textContent` | The text inside that node (if any)                 |
+
 ## Types of Nodes
 
 ### 1. Document Node
