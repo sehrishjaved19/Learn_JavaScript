@@ -1,40 +1,57 @@
-const taskInput = document.getElementById("taskInput");
-
-const addTaskBtn = document.getElementById("addTaskBtn");
-const taskList = document.getElementById("taskList");
-const clearCompletedBtn = document.getElementById("clearCompletedBtn");
-
-let tasks = [];
+// Function to add a task
 function addTask() {
-    const taskText = taskInput.value.trim();
+    const input = document.getElementById("taskInput");
+    const taskText = input.value.trim();
+
     if (taskText !== "") {
-        tasks.push({text : taskText});
-        taskInput.value = "";
-        displayTasks();
+        const ul = document.getElementById("todoList");
+
+        // Create new list item
+        const li = document.createElement("li");
+
+        // Create task text element
+        const span = document.createElement("span");
+        span.textContent = taskText;
+
+        // Create edit button
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        editButton.onclick = () => editTask(span);
+
+        // Create remove button
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Delete";
+        removeButton.onclick = () => removeTask(li);
+
+        // Append buttons and text to the list item
+        li.appendChild(span);
+        li.appendChild(editButton);
+        li.appendChild(removeButton);
+
+        // Append list item to the list
+        ul.appendChild(li);
+
+        // Clear the input field
+        input.value = "";
+    }
+    else {
+            alert("Please enter a valid task.");
+        }
+}
+
+// Function to edit an existing task
+function editTask(span) {
+    // Prompt the user to enter a new task description
+    const newTask = prompt("Edit your task:", span.textContent);
+    
+    // Update the task only if the input is not null or empty
+    if (newTask !== null && newTask.trim() !== "") {
+        span.textContent = newTask.trim(); // Set the new task text
     }
 }
 
-function displayTasks() {
-    taskList.innerHTML = "";
-    tasks.forEach((task, index) => {
-        const li = document.createElement("li");
-        li.innerHTML = `<input type = "checkbox" id = "task-${index} ${task.completed ? "checked" : ""}><label for="task-${index}">${task.text}</label>`;
-        li.querySelector("input").addEventListener("change", () => toggleTask(index));
-        taskList.appendChild(li);
-    });
+// Function to remove a task from the to-do list
+function removeTask(task){
+    const ul = document.getElementById("todoList"); // Get the list container
+    ul.removeChild(task); // Remove the specified task element
 }
-
-function toggleTask(index) {
-    tasks[index].completed = !tasks[index].completed;
-    displayTasks();
-}
-
-function clearCompletedTasks() {
-    tasks = tasks.filter(task => !task.completed);
-    displayTasks();
-}
-
-addTaskBtn.addEventListener("click", addTask);
-clearCompletedBtn.addEventListener("click", clearCompletedTasks);
-
- displayTasks();

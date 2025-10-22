@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <input type="text" name="taskInput" id="taskInput" placeholder="Add a new task">
-    <button id = "addTaskBtn">Add Task</button>
 
-    <!--<input type = "text" id = "searchInput" placeholder = "seach...">-->
-    <ul id="taskList">
-        <!--Tasks will be displayed here-->
-    </ul>
-    <button id = "clearCompletedBtn">Clear Completed</button>
-    <script src="script.js"></script>
+<div class="todo-container">
+    <h1>To-Do List</h1>
+
+    <!-- Input field to add new tasks -->
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    
+    <!-- Button to add a new task to the list -->
+    <button class="add-btn" onclick="addTask()">Add Task</button>
+    
+    <!-- Unordered list to display the tasks -->
+    <ul class="todo-list" id="todoList"></ul>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
