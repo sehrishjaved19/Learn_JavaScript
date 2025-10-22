@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client-Side JavaScript with HTML</title>
+
+  <style>
+    /* ====== General Page Styling ====== */
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0078ff, #00c3ff);
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 12px;
+      padding: 30px 40px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #0078ff;
+      margin-top: 40px;
+      border-bottom: 2px solid #e8f0fe;
+      padding-bottom: 6px;
+    }
+
+    h3 {
+      color: #444;
+      margin-top: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #0078ff;
+      color: white;
+    }
+
+    code {
+      background: #f1f3f4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: "Courier New", monospace;
+    }
+
+    pre {
+      background: #f1f3f4;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    .note {
+      background: #e8f4ff;
+      border-left: 4px solid #0078ff;
+      padding: 10px 15px;
+      margin: 15px 0;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0078ff;
+      color: white;
+      margin-top: 40px;
+      border-radius: 0 0 12px 12px;
+    }
+
+    button {
+      background-color: #0078ff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fcc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>📘 Client-Side JavaScript with HTML</h1>
+    <p>Learn how JavaScript makes web pages dynamic and interactive!</p>
+  </header>
+
+  <main>
+    <h2>🎯 Learning Objectives</h2>
+    <ul>
+      <li>Define a <strong>client-side script</strong></li>
+      <li>Give examples of client-side scripting uses</li>
+      <li>Explain how to use the <code>&lt;noscript&gt;</code> tag</li>
+      <li>Describe <strong>Event Binding</strong></li>
+    </ul>
+
+    <h2>💻 1. What Is a Client-Side Script?</h2>
+    <table>
+      <tr><th>Term</th><th>Description</th><th>Example</th></tr>
+      <tr>
+        <td><strong>Client-Side Script</strong></td>
+        <td>A program that runs on the user’s browser instead of the server.</td>
+        <td>JavaScript code inside or linked to an HTML page.</td>
+      </tr>
+      <tr>
+        <td><strong>Purpose</strong></td>
+        <td>To make web pages interactive, dynamic, and responsive.</td>
+        <td>Form validation, animations, reacting to button clicks.</td>
+      </tr>
+    </table>
+
+    <div class="note">
+      🧠 <strong>Key Idea:</strong> When a web page loads in a browser, JavaScript runs locally on your computer — not on the web server.
+    </div>
+
+    <h2>⚙️ 2. When Client-Side Scripts Are Used</h2>
+    <table>
+      <tr><th>Use Case</th><th>Description</th></tr>
+      <tr><td><strong>Form Validation</strong></td><td>Check user input before sending to the server.</td></tr>
+      <tr><td><strong>Live Feedback</strong></td><td>Update the page instantly as the user types.</td></tr>
+      <tr><td><strong>Dynamic Content</strong></td><td>Create or change elements on the page.</td></tr>
+      <tr><td><strong>Event Handling</strong></td><td>Respond to actions like clicks or page loads.</td></tr>
+    </table>
+
+    <pre><code>&lt;button onclick="alert('Button Clicked!')"&gt;Click Me&lt;/button&gt;</code></pre>
+
+    <h2>🧩 3. Adding JavaScript to HTML</h2>
+    <table>
+      <tr><th>Method</th><th>Description</th><th>Example</th></tr>
+      <tr>
+        <td><strong>Inline Script</strong></td>
+        <td>Written directly in the HTML document (best for short scripts).</td>
+        <td><code>&lt;script&gt;alert("Hello!");&lt;/script&gt;</code></td>
+      </tr>
+      <tr>
+        <td><strong>External Script File</strong></td>
+        <td>Stored in a separate <code>.js</code> file and linked using the <code>src</code> attribute.</td>
+        <td><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></td>
+      </tr>
+    </table>
+
+    <div class="note">
+      🧠 <strong>Best Practice:</strong> Use external JS files for better organization, reusability, and performance.
+    </div>
+
+    <h2>🚫 4. The &lt;noscript&gt; Tag</h2>
+    <table>
+      <tr><th>Purpose</th><th>Description</th><th>Example</th></tr>
+      <tr>
+        <td><strong>&lt;noscript&gt;</strong></td>
+        <td>Displays alternative content if JavaScript is disabled or unsupported.</td>
+        <td><code>&lt;noscript&gt;Your browser does not support JavaScript.&lt;/noscript&gt;</code></td>
+      </tr>
+    </table>
+
+    <h2>🖱️ 5. Event Binding</h2>
+    <table>
+      <tr><th>Term</th><th>Description</th><th>Example</th></tr>
+      <tr>
+        <td><strong>Event</strong></td>
+        <td>An action detected by the browser (e.g., click, load, hover).</td>
+        <td>Button click, page load</td>
+      </tr>
+      <tr>
+        <td><strong>Event Binding</strong></td>
+        <td>Connecting an event to a JavaScript function that runs when it occurs.</td>
+        <td>Run <code>showAnswers()</code> when a button is clicked.</td>
+      </tr>
+    </table>
+
+    <h3>Common Events</h3>
+    <table>
+      <tr><th>Event</th><th>Trigger</th><th>Example</th></tr>
+      <tr><td><code>onload</code></td><td>When the page finishes loading</td><td><code>&lt;body onload="init()"&gt;</code></td></tr>
+      <tr><td><code>onclick</code></td><td>When an element is clicked</td><td><code>&lt;button onclick="run()"&gt;</code></td></tr>
+      <tr><td><code>onmouseover</code></td><td>Mouse moves over element</td><td><code>&lt;p onmouseover="highlight()"&gt;</code></td></tr>
+      <tr><td><code>onfocus</code></td><td>Element receives focus</td><td><code>&lt;input onfocus="highlightField()"&gt;</code></td></tr>
+      <tr><td><code>onkeyup</code></td><td>Key released while typing</td><td><code>&lt;input onkeyup="checkInput()"&gt;</code></td></tr>
+      <tr><td><code>onsubmit</code></td><td>Form submitted</td><td><code>&lt;form onsubmit="validateForm()"&gt;</code></td></tr>
+      <tr><td><code>onselect</code></td><td>User selects text</td><td><code>&lt;input onselect="textSelected()"&gt;</code></td></tr>
+    </table>
+
+    <h3>🧠 Example: Inline Event Binding</h3>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;script&gt;
+    function showAnswers() {
+      alert("Button clicked!");
+    }
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload="alert('Page loaded!')"&gt;
+  &lt;button onclick="showAnswers()"&gt;Click Me&lt;/button&gt;
+
+  &lt;noscript&gt;
+    JavaScript is disabled — please enable it for full functionality.
+  &lt;/noscript&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <h2>🧾 Summary Table</h2>
+    <table>
+      <tr><th>Concept</th><th>Description</th><th>Example</th></tr>
+      <tr><td><strong>Client-side script</strong></td><td>Runs on the browser, not the server</td><td><code>&lt;script&gt;&lt;/script&gt;</code></td></tr>
+      <tr><td><strong>Inline script</strong></td><td>Code written inside HTML</td><td><code>&lt;script&gt;...&lt;/script&gt;</code></td></tr>
+      <tr><td><strong>External script</strong></td><td>Linked .js file</td><td><code>&lt;script src="file.js"&gt;&lt;/script&gt;</code></td></tr>
+      <tr><td><strong>&lt;noscript&gt;</strong></td><td>Shown when JS is off</td><td><code>&lt;noscript&gt;Enable JS&lt;/noscript&gt;</code></td></tr>
+      <tr><td><strong>Event Binding</strong></td><td>Connecting events to functions</td><td><code>&lt;button onclick="run()"&gt;</code></td></tr>
+    </table>
+  </main>
+
+  <footer>
+    © 2025 Client-Side JavaScript Lesson — Created by Sehrish Javed
+  </footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Node & Element Properties Cheatsheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f8f9fa;
+      color: #333;
+    }
+    h1, h2 {
+      color: #1a73e8;
+      margin-top: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      background: #fff;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #e3f2fd;
+    }
+    code {
+      background: #f1f3f4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧩 DOM HTML-Related Node Types</h1>
+  <table>
+    <tr>
+      <th>NODE TYPE (TEXT)</th>
+      <th>INTEGER VALUE</th>
+      <th>NODE NAME</th>
+      <th>NODE VALUE</th>
+      <th>DESCRIPTION</th>
+    </tr>
+    <tr><td><b>Element</b></td><td>1</td><td>Tag name</td><td><code>null</code></td><td>Any HTML tag</td></tr>
+    <tr><td><b>Attribute</b></td><td>2</td><td>Attribute name</td><td>Attribute value</td><td>A name-value pair</td></tr>
+    <tr><td><b>Text</b></td><td>3</td><td><code>#text</code></td><td>Text content</td><td>Text that is contained by the element</td></tr>
+    <tr><td><b>Comment</b></td><td>8</td><td><code>#comment</code></td><td>Text comment</td><td>HTML comment</td></tr>
+    <tr><td><b>Document</b></td><td>9</td><td><code>#document</code></td><td><code>null</code></td><td>Represents the entire HTML document</td></tr>
+    <tr><td><b>Document Type</b></td><td>10</td><td><code>DOCTYPE</code></td><td><code>null</code></td><td>DTD specification</td></tr>
+    <tr><td><b>Fragment</b></td><td>11</td><td><code>#document-fragment</code></td><td><code>null</code></td><td>Lightweight container for nodes</td></tr>
+  </table>
+
+  <h2>🧱 DOM Level 2 Node Object Properties</h2>
+  <table>
+    <tr>
+      <th>OBJECT PROPERTY</th>
+      <th>DATA TYPE</th>
+      <th>DESCRIPTION</th>
+    </tr>
+    <tr><td><b>nodeName</b></td><td>String</td><td>Name of the node (e.g., tag name)</td></tr>
+    <tr><td><b>nodeValue</b></td><td>String</td><td>Value of the node (if applicable)</td></tr>
+    <tr><td><b>nodeType</b></td><td>Integer</td><td>Type of node (refer to table above)</td></tr>
+    <tr><td><b>parentNode</b></td><td>Object</td><td>Nearest containing (parent) node</td></tr>
+    <tr><td><b>childNodes</b></td><td>Array</td><td>All child nodes (elements + text)</td></tr>
+    <tr><td><b>firstChild</b></td><td>Object</td><td>First child node</td></tr>
+    <tr><td><b>lastChild</b></td><td>Object</td><td>Last child node</td></tr>
+    <tr><td><b>attributes</b></td><td>NodeMap</td><td>Array-like collection of attributes</td></tr>
+  </table>
+
+  <h2>🌿 Common DOM Element Properties</h2>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>What It Does</th>
+      <th>Example</th>
+    </tr>
+    <tr><td><b>.innerHTML</b></td><td>Gets/sets HTML content inside the element</td><td><code>div.innerHTML = "&lt;p&gt;Hello&lt;/p&gt;"</code></td></tr>
+    <tr><td><b>.outerHTML</b></td><td>Gets/sets HTML including the element itself</td><td><code>div.outerHTML = "&lt;section&gt;Hi&lt;/section&gt;"</code></td></tr>
+    <tr><td><b>.innerText</b></td><td>Gets/sets rendered text (ignores hidden text via CSS)</td><td><code>div.innerText = "Hello"</code></td></tr>
+    <tr><td><b>.style</b></td><td>Access or modify inline styles</td><td><code>div.style.color = "red"</code></td></tr>
+    <tr><td><b>.className</b></td><td>Get/set element's CSS class name(s)</td><td><code>div.className = "active"</code></td></tr>
+    <tr><td><b>.id</b></td><td>Get/set the element's ID attribute</td><td><code>div.id = "mainSection"</code></td></tr>
+    <tr><td><b>.value</b></td><td>For form inputs: get/set value</td><td><code>input.value = "Sehrish"</code></td></tr>
+    <tr><td><b>.attributes</b></td><td>Access all attributes as a NamedNodeMap</td><td><code>console.log(div.attributes)</code></td></tr>
+    <tr><td><b>.parentNode</b></td><td>Access the parent element</td><td><code>div.parentNode</code></td></tr>
+    <tr><td><b>.childNodes</b></td><td>Access all child nodes (elements, text, comments)</td><td><code>div.childNodes</code></td></tr>
+    <tr><td><b>.children</b></td><td>Access only element children (ignores text/comments)</td><td><code>div.children</code></td></tr>
+    <tr><td><b>.firstChild / .lastChild</b></td><td>Get first/last child node (can be text or element)</td><td><code>div.firstChild</code></td></tr>
+    <tr><td><b>.firstElementChild / .lastElementChild</b></td><td>Get first/last element child only</td><td><code>div.firstElementChild</code></td></tr>
+    <tr><td><b>.nextSibling / .previousSibling</b></td><td>Access next/previous node (can be text/comment)</td><td><code>div.nextSibling</code></td></tr>
+    <tr><td><b>.nextElementSibling / .previousElementSibling</b></td><td>Access next/previous element only</td><td><code>div.nextElementSibling</code></td></tr>
+  </table>
+
+</body>
+</html>

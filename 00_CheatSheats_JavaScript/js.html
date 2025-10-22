@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Programming for Web Applications - Glossary</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #222;
+    margin: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #1a73e8;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    vertical-align: top;
+  }
+  th {
+    background-color: #1a73e8;
+    color: white;
+    text-align: left;
+    font-size: 18px;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f6fc;
+  }
+  code {
+    background-color: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #c7254e;
+  }
+  pre {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+  }
+</style>
+</head>
+<body>
+
+<h1>Glossary: JavaScript Programming for Web Applications</h1>
+
+<table>
+  <tr>
+    <th>Term</th>
+    <th>Definition</th>
+  </tr>
+
+  <tr>
+    <td>AJAX</td>
+    <td>“Asynchronous JavaScript and XML” that encompasses more than asynchronous server calls through JavaScript and XML. It is not programming language or technology but rather a programming concept. Ajax represents a series of techniques that provide richer, interactive web applications through HTML, JavaScript, Cascading style sheets, and modifying the web page through the Document Object Model. The name is misleading though because nowadays, JSON is commonly used instead of XML.</td>
+  </tr>
+
+  <tr>
+    <td>Anonymous Functions</td>
+    <td>A type of function that has no name or we can say which is without any name. It is declared without any identifier and is often used as a parameter of another function. It is a common way to execute a function immediately after its declaration.</td>
+  </tr>
+
+  <tr>
+    <td>Array</td>
+    <td>A data structure that aids the programmer in the storage and retrieval of data by indexed keys. Arrays use a zero-based indexing scheme, meaning that the first element of an array has an index of zero. Arrays grow or shrink dynamically by adding or removing elements.</td>
+  </tr>
+
+  <tr>
+    <td>Classes</td>
+    <td>Classes act as a blueprint or template for building objects with similar characteristics and behaviours. A class encapsulates data (in the form of properties) and functions (in the form of methods) that work on that data.</td>
+  </tr>
+
+  <tr>
+    <td>Client-Side Script</td>
+    <td>
+      A program that accompanies an HTML doc or embedded in HTML. Scripts run during load of a document or when an action is performed. They can be used to validate forms, process input, or dynamically create document elements.<br><br>
+      Embed a script in HTML, with the <code>&lt;script&gt;</code> tag in either of the following ways:<br>
+      • <code>&lt;script&gt; // JS code &lt;/script&gt;</code><br>
+      • <code>&lt;script src="path name"&gt;&lt;/script&gt;</code><br><br>
+      Use <code>&lt;noscript&gt;</code> tag for browsers with JavaScript disabled or ones that don’t support JavaScript.
+    </td>
+  </tr>
+
+  <tr>
+    <td>Document Objects</td>
+    <td>Document representing the main web page that gives access to all HTML elements on the page. When page is loaded HTML doc becomes a document. It is referred to with “document”.</td>
+  </tr>
+
+  <tr>
+    <td>DOM</td>
+    <td>“Document Object Model” is a programming interface (API) between HTML and JavaScript. It allows for dynamically accessing and updating content, structure, and style. JavaScript uses the DOM to access and modify web page elements in the browser.</td>
+  </tr>
+
+  <tr>
+    <td>Element Nodes</td>
+    <td>All HTML tags.</td>
+  </tr>
+
+  <tr>
+    <td>Element Objects</td>
+    <td>The most general base class that all element objects in a Document inherit. It only has methods and properties common to all elements. Everything in a HTML page is an element. And one element can have other elements nested within itself.</td>
+  </tr>
+
+  <tr>
+    <td>Event</td>
+    <td>An event is something either a browser or a user does that the JavaScript can react to such as a button click or when a user submits input on a form.</td>
+  </tr>
+
+  <tr>
+    <td>Event Binding</td>
+    <td>Refers to telling the browser that a function should be called whenever some ‘event’ occurs.</td>
+  </tr>
+
+  <tr>
+    <td>Event Handlers</td>
+    <td>
+      A function that declares what to do when an action is performed such as the click of a button.<br><br>
+      Example:
+      <pre>
+&lt;button type="button" onclick="showAnswers()"&gt; Show Solution
+  &lt;script&gt;
+    function showAnswers() {
+      //code
+      alert("A")
+    }
+  &lt;/script&gt;
+&lt;/button&gt;
+      </pre>
+      Note that <code>showAnswers()</code> is an event handler.
+    </td>
+  </tr>
+
+  <tr>
+    <td>Extend</td>
+    <td>This keyword is used in class declarations or class expressions to create a class that is a child of another class.</td>
+  </tr>
+
+  <tr>
+    <td>Functions</td>
+    <td>
+      Functions are modules of code that execute a particular task. They may take-in data, called arguments or parameters, and sometimes return data as well, called the return value.<br><br>
+      Functions are commonly defined with this syntax:
+      <pre>
+function functionName() {
+  // function code;
+  // optional return statement;
+}
+      </pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>IIFE</td>
+    <td>“Immediately Invoked Function Expression” runs immediately after it is defined. After the function executes it cannot be called again elsewhere in the program. It is a type of self-executing function.</td>
+  </tr>
+
+  <tr>
+    <td>Nodes</td>
+    <td>The basis of all elements in the Document Object Model (DOM) structure.</td>
+  </tr>
+
+  <tr>
+    <td>Objects</td>
+    <td>Objects are instances created from a class. They are real-world entities that represent the characteristics defined by the class. Objects have a special set of properties that store data and methods that specify behaviours. These methods and properties can be accessed and changed to carry out specific tasks and communicate with other programs.</td>
+  </tr>
+
+  <tr>
+    <td>Prototypes</td>
+    <td>
+      A function prototype lets you easily define and add properties or methods to an object. Prototypes exist for all objects that can be created with the keyword “new”. All object constructors create objects that inherit properties and methods that are defined by the prototype. At instantiation objects inherit the current state of the prototype. Note however, that scripts can override prototype properties and functions.<br><br>
+      Following is an example of using a prototype to add a method to the Car class:
+      <pre>
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+Car.prototype.getName = function() {
+  return this.make + ' ' + this.model + ' ' + this.year;
+}
+      </pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Script</td>
+    <td>Offers developers means to modify and extend HTML documents in highly interactive ways. Scripts can be used to validate forms or to process input as it is typed. Scripts can be triggered by events that occur on a web page, such as the clicking of a button. Scripts can be used to dynamically create document elements on an HTML page.</td>
+  </tr>
+
+  <tr>
+    <td>Self-Executing Functions</td>
+    <td>Often used to initialize data or declare DOM elements. These functions can be anonymous.</td>
+  </tr>
+
+  <tr>
+    <td>Text Nodes</td>
+    <td>The nodes that contain actual text that go between an element start tag and end tag.</td>
+  </tr>
+
+  <tr>
+    <td>this</td>
+    <td>Keyword “this” refers to current instance of the object. The value of “this” can vary depending on how the object is called.</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
