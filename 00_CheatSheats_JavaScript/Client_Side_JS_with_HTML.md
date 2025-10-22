@@ -75,11 +75,16 @@ Use external JS files for better **organization, reusability, and performance**.
 
 ### Common Events
 
-| Event             | Trigger                              | Example                                          |
-| ----------------- | ------------------------------------ | ------------------------------------------------ |
-| **`onload`**      | When the page finishes loading       | `<body onload="init()">`                         |
-| **`onclick`**     | When an element is clicked           | `<button onclick="showAnswers()">Click</button>` |
-| **`onmouseover`** | When the mouse moves over an element | `<p onmouseover="highlight()">Hover over me</p>` |
+| **Event**         | **Trigger**                                  | **Example**                                         |
+| ----------------- | -------------------------------------------- | --------------------------------------------------- |
+| **`onload`**      | When the page finishes loading               | `<body onload="init()">`                            |
+| **`onclick`**     | When an element is clicked                   | `<button onclick="showAnswers()">Click Me</button>` |
+| **`onmouseover`** | When the mouse pointer moves over an element | `<p onmouseover="highlight()">Hover over me</p>`    |
+| **`onfocus`**     | When an element (like input) receives focus  | `<input onfocus="highlightField()">`                |
+| **`onkeyup`**     | When a key is released while typing          | `<input onkeyup="checkInput()">`                    |
+| **`onsubmit`**    | When a form is submitted                     | `<form onsubmit="validateForm()">`                  |
+| **`onselect`**    | When the user selects text in a text field   | `<input onselect="textSelected()">`                 |
+
 
 ---
 
