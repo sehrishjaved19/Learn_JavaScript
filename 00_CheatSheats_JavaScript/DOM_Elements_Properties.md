@@ -1,3 +1,17 @@
+# 🧩 DOM HTML-Related Node Types
+
+| **NODE TYPE (TEXT)** | **INTEGER VALUE** | **NODE NAME**        | **NODE VALUE**  | **DESCRIPTION**                       |
+| -------------------- | ----------------- | -------------------- | --------------- | ------------------------------------- |
+| **Element**          | 1                 | Tag name             | `null`          | Any HTML tag                          |
+| **Attribute**        | 2                 | Attribute name       | Attribute value | A name-value pair                     |
+| **Text**             | 3                 | `#text`              | Text content    | Text that is contained by the element |
+| **Comment**          | 8                 | `#comment`           | Text comment    | HTML comment                          |
+| **Document**         | 9                 | `#document`          | `null`          | Document object                       |
+| **Document Type**    | 10                | `DOCTYPE`            | `null`          | DTD specification                     |
+| **Fragment**         | 11                | `#document fragment` | `null`          | Nodes outside the document            |
+
+---
+
 # Common DOM Element Properties
 | Property                                    | What it Does                                               | Example                                   |
 | ------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------- |
