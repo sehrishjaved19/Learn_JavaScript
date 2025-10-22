@@ -12,6 +12,22 @@
 
 ---
 
+### 🧱 DOM Level 2 Node Object Properties
+
+| **OBJECT PROPERTY** | **DATA TYPE** | **DESCRIPTION**                       |
+| ------------------- | ------------- | ------------------------------------- |
+| **nodeName**        | String        | Refer to previous table               |
+| **nodeValue**       | String        | Refer to previous table               |
+| **nodeType**        | Integer       | Integer constant – see previous table |
+| **parentNode**      | Object        | Nearest containing object             |
+| **childNodes**      | Array         | All child nodes                       |
+| **firstChild**      | Object        | First child                           |
+| **lastChild**       | Object        | Last child                            |
+| **attributes**      | NodeMap       | Array of attributes                   |
+
+---
+
+
 # Common DOM Element Properties
 | Property                                    | What it Does                                               | Example                                   |
 | ------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------- |
