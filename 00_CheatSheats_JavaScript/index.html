@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Learning Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+  <h1>📚 JavaScript Learning Collection</h1>
+  <p>This page combines all your JavaScript-related cheat sheets, notes, and glossaries into one complete learning reference.</p>
+
+  <nav>
+    <ul>
+      <li><a href="#section1">Glossary</a></li>
+      <li><a href="#section2">DOM & BOM Terminologies</a></li>
+      <li><a href="#section3">DOM Node & Element Properties</a></li>
+      <li><a href="#section4">DOM Access Methods</a></li>
+      <li><a href="#section5">DOM Manipulation</a></li>
+      <li><a href="#section6">Event Handling</a></li>
+    </ul>
+  </nav>
+</header>
+<hr>
+
+  <!-- ===================== SECTION 1 ===================== -->
+<h2 id="section1">📖 Glossary: JavaScript Programming for Web Applications</h2>
+
+  <table>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+
+    <tr>
+      <td>AJAX</td>
+      <td>“Asynchronous JavaScript and XML” that encompasses more than asynchronous server calls through JavaScript and XML. It is not a programming language but rather a programming concept combining HTML, JavaScript, and CSS to make web pages dynamic. JSON is now more common than XML.</td>
+    </tr>
+
+    <tr>
+      <td>Anonymous Functions</td>
+      <td>Functions without names, often used as arguments or immediately invoked after definition.</td>
+    </tr>
+
+    <tr>
+      <td>Array</td>
+      <td>A data structure for storing ordered elements accessible by index, starting at 0. Arrays can grow or shrink dynamically.</td>
+    </tr>
+
+    <tr>
+      <td>Classes</td>
+      <td>Blueprints for creating objects with shared properties and methods.</td>
+    </tr>
+
+    <tr>
+      <td>Client-Side Script</td>
+      <td>Programs that run in the browser, typically embedded using the <code>&lt;script&gt;</code> tag. They can validate forms or dynamically create content.</td>
+    </tr>
+
+    <tr>
+      <td>Document Objects</td>
+      <td>Represents the HTML page loaded in the browser and provides access to all its elements via JavaScript.</td>
+    </tr>
+
+    <tr>
+      <td>DOM</td>
+      <td>The Document Object Model, a programming interface that lets JavaScript dynamically access and modify webpage elements.</td>
+    </tr>
+
+    <tr>
+      <td>Element Nodes</td>
+      <td>All HTML tags within the DOM structure.</td>
+    </tr>
+
+    <tr>
+      <td>Element Objects</td>
+      <td>Base class objects in a document that hold shared properties and methods for all HTML elements.</td>
+    </tr>
+
+    <tr>
+      <td>Event</td>
+      <td>Any action the user or browser performs that JavaScript can respond to, such as a click or form submission.</td>
+    </tr>
+
+    <tr>
+      <td>Event Binding</td>
+      <td>The process of linking a function to run when a particular event occurs.</td>
+    </tr>
+
+    <tr>
+      <td>Event Handlers</td>
+      <td>Functions that specify what to do when a specific event happens, such as <code>onclick</code> for button clicks.</td>
+    </tr>
+
+    <tr>
+      <td>Extend</td>
+      <td>Keyword used in class declarations to create a subclass from another class.</td>
+    </tr>
+
+    <tr>
+      <td>Functions</td>
+      <td>Reusable blocks of code that perform specific tasks and may return values.</td>
+    </tr>
+
+    <tr>
+      <td>IIFE</td>
+      <td>Immediately Invoked Function Expression — executes right after its definition and cannot be reused later.</td>
+    </tr>
+
+    <tr>
+      <td>Nodes</td>
+      <td>The fundamental units in the DOM tree — everything is a node (elements, text, comments).</td>
+    </tr>
+
+    <tr>
+      <td>Objects</td>
+      <td>Instances of classes representing data and functionality grouped together.</td>
+    </tr>
+
+    <tr>
+      <td>Prototypes</td>
+      <td>Used to add or inherit properties/methods among JavaScript objects.</td>
+    </tr>
+
+    <tr>
+      <td>Script</td>
+      <td>Code that extends HTML functionality, handles events, or dynamically manipulates the DOM.</td>
+    </tr>
+
+    <tr>
+      <td>Self-Executing Functions</td>
+      <td>Functions that execute automatically once defined; commonly used for initialization.</td>
+    </tr>
+
+    <tr>
+      <td>Text Nodes</td>
+      <td>Nodes that hold the actual text content within an element’s start and end tags.</td>
+    </tr>
+
+    <tr>
+      <td>this</td>
+      <td>Keyword referring to the current object instance depending on how the function is called.</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <!-- ===================== SECTION 2 ===================== -->
+
+   <h2 id="section2">📘 JavaScript DOM & BOM Terminologies</h2>
+
+  <table>
+    <tr>
+      <th>Terminology</th>
+      <th>Description</th>
+      <th>Code Example</th>
+    </tr>
+    <tr>
+      <td><b>try { ... }</b></td>
+      <td>The code that might generate an error is enclosed within a try block. This block helps monitor and handle potential errors gracefully.</td>
+      <td><code>const obj = undefined; try { console.log(obj.name); } catch (err) { console.error(err.message); }</code></td>
+    </tr>
+    <tr>
+      <td><b>catch (error)</b></td>
+      <td>Catches and handles any errors thrown inside the try block.</td>
+      <td><code>try { ... } catch (error) { console.log(error.message); }</code></td>
+    </tr>
+    <tr>
+      <td><b>finally</b></td>
+      <td>Executes code regardless of whether an error occurred or not.</td>
+      <td><code>try { ... } catch { ... } finally { console.log("Done"); }</code></td>
+    </tr>
+    <tr>
+      <td><b>throw</b></td>
+      <td>Manually throws an error to be caught by catch.</td>
+      <td><code>throw new Error("Custom error message");</code></td>
+    </tr>
+    <tr>
+      <td><b>window</b></td>
+      <td>The global object representing the browser window.</td>
+      <td><code>window.alert("Hello");</code></td>
+    </tr>
+    <tr>
+      <td><b>document</b></td>
+      <td>Represents the HTML document loaded in the browser.</td>
+      <td><code>document.title = "New Title";</code></td>
+    </tr>
+    <tr>
+      <td><b>navigator</b></td>
+      <td>Contains information about the browser and OS.</td>
+      <td><code>navigator.userAgent</code></td>
+    </tr>
+    <tr>
+      <td><b>screen</b></td>
+      <td>Provides information about the user's screen dimensions.</td>
+      <td><code>screen.width</code></td>
+    </tr>
+    <tr>
+      <td><b>location</b></td>
+      <td>Represents the current URL of the document.</td>
+      <td><code>location.href</code></td>
+    </tr>
+    <tr>
+      <td><b>history</b></td>
+      <td>Gives access to the browser’s session history.</td>
+      <td><code>history.back(); history.forward();</code></td>
+    </tr>
+    <tr>
+      <td><b>alert()</b></td>
+      <td>Displays a simple alert dialog with a message.</td>
+      <td><code>alert("Welcome");</code></td>
+    </tr>
+    <tr>
+      <td><b>confirm()</b></td>
+      <td>Displays a dialog with OK and Cancel buttons.</td>
+      <td><code>confirm("Are you sure?");</code></td>
+    </tr>
+    <tr>
+      <td><b>prompt()</b></td>
+      <td>Displays a dialog asking for user input.</td>
+      <td><code>prompt("Enter your name:");</code></td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <!-- ===================== SECTION 3 ===================== -->
+  <h2 id="section3">🧩 DOM Node & Element Properties Cheatsheet</h2>
+
+  <h3>🧩 DOM HTML-Related Node Types</h3>
+  <table>
+    <tr>
+      <th>NODE TYPE (TEXT)</th>
+      <th>INTEGER VALUE</th>
+      <th>NODE NAME</th>
+      <th>NODE VALUE</th>
+      <th>DESCRIPTION</th>
+    </tr>
+    <tr><td><b>Element</b></td><td>1</td><td>Tag name</td><td><code>null</code></td><td>Any HTML tag</td></tr>
+    <tr><td><b>Attribute</b></td><td>2</td><td>Attribute name</td><td>Attribute value</td><td>A name-value pair</td></tr>
+    <tr><td><b>Text</b></td><td>3</td><td><code>#text</code></td><td>Text content</td><td>Text that is contained by the element</td></tr>
+    <tr><td><b>Comment</b></td><td>8</td><td><code>#comment</code></td><td>Text comment</td><td>HTML comment</td></tr>
+    <tr><td><b>Document</b></td><td>9</td><td><code>#document</code></td><td><code>null</code></td><td>Represents the entire HTML document</td></tr>
+    <tr><td><b>Document Type</b></td><td>10</td><td><code>DOCTYPE</code></td><td><code>null</code></td><td>DTD specification</td></tr>
+    <tr><td><b>Fragment</b></td><td>11</td><td><code>#document-fragment</code></td><td><code>null</code></td><td>Lightweight container for nodes</td></tr>
+  </table>
+
+  <h3>🧱 DOM Level 2 Node Object Properties</h3>
+  <table>
+    <tr>
+      <th>OBJECT PROPERTY</th>
+      <th>DATA TYPE</th>
+      <th>DESCRIPTION</th>
+    </tr>
+    <tr><td><b>nodeName</b></td><td>String</td><td>Name of the node (e.g., tag name)</td></tr>
+    <tr><td><b>nodeValue</b></td><td>String</td><td>Value of the node (if applicable)</td></tr>
+    <tr><td><b>nodeType</b></td><td>Integer</td><td>Type of node (refer to table above)</td></tr>
+    <tr><td><b>parentNode</b></td><td>Object</td><td>Nearest containing (parent) node</td></tr>
+    <tr><td><b>childNodes</b></td><td>Array</td><td>All child nodes (elements + text)</td></tr>
+    <tr><td><b>firstChild</b></td><td>Object</td><td>First child node</td></tr>
+    <tr><td><b>lastChild</b></td><td>Object</td><td>Last child node</td></tr>
+    <tr><td><b>attributes</b></td><td>NodeMap</td><td>Array-like collection of attributes</td></tr>
+  </table>
+
+  <h3>🌿 Common DOM Element Properties</h3>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>What It Does</th>
+      <th>Example</th>
+    </tr>
+    <tr><td><b>.innerHTML</b></td><td>Gets/sets HTML content inside the element</td><td><code>div.innerHTML = "&lt;p&gt;Hello&lt;/p&gt;"</code></td></tr>
+    <tr><td><b>.outerHTML</b></td><td>Gets/sets HTML including the element itself</td><td><code>div.outerHTML = "&lt;section&gt;Hi&lt;/section&gt;"</code></td></tr>
+    <tr><td><b>.innerText</b></td><td>Gets/sets rendered text (ignores hidden text via CSS)</td><td><code>div.innerText = "Hello"</code></td></tr>
+    <tr><td><b>.style</b></td><td>Access or modify inline styles</td><td><code>div.style.color = "red"</code></td></tr>
+    <tr><td><b>.className</b></td><td>Get/set element's CSS class name(s)</td><td><code>div.className = "active"</code></td></tr>
+    <tr><td><b>.id</b></td><td>Get/set the element's ID attribute</td><td><code>div.id = "mainSection"</code></td></tr>
+    <tr><td><b>.value</b></td><td>For form inputs: get/set value</td><td><code>input.value = "Sehrish"</code></td></tr>
+    <tr><td><b>.attributes</b></td><td>Access all attributes as a NamedNodeMap</td><td><code>console.log(div.attributes)</code></td></tr>
+    <tr><td><b>.parentNode</b></td><td>Access the parent element</td><td><code>div.parentNode</code></td></tr>
+    <tr><td><b>.childNodes</b></td><td>Access all child nodes (elements, text, comments)</td><td><code>div.childNodes</code></td></tr>
+    <tr><td><b>.children</b></td><td>Access only element children (ignores text/comments)</td><td><code>div.children</code></td></tr>
+    <tr><td><b>.firstChild / .lastChild</b></td><td>Get first/last child node (can be text or element)</td><td><code>div.firstChild</code></td></tr>
+    <tr><td><b>.firstElementChild / .lastElementChild</b></td><td>Get first/last element child only</td><td><code>div.firstElementChild</code></td></tr>
+    <tr><td><b>.nextSibling / .previousSibling</b></td><td>Access next/previous node (can be text/comment)</td><td><code>div.nextSibling</code></td></tr>
+    <tr><td><b>.nextElementSibling / .previousElementSibling</b></td><td>Access next/previous element only</td><td><code>div.nextElementSibling</code></td></tr>
+  </table>
+
+  <hr>
+  <!-- ===================== SECTION 4 ===================== -->
+   <h2 id="section4">💡 JavaScript DOM Access Methods</h2>
+
+  <table>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+
+    <tr>
+      <td><b>document.getElementById()</b></td>
+      <td>Selects the first element with the specified ID.</td>
+      <td><code>document.getElementById("main")</code></td>
+    </tr>
+
+    <tr>
+      <td><b>document.getElementsByClassName()</b></td>
+      <td>Returns all elements with the specified class name (as an HTMLCollection).</td>
+      <td><code>document.getElementsByClassName("item")[0]</code></td>
+    </tr>
+
+    <tr>
+      <td><b>document.getElementsByTagName()</b></td>
+      <td>Returns all elements with the specified tag name.</td>
+      <td><code>document.getElementsByTagName("div")</code></td>
+    </tr>
+
+    <tr>
+      <td><b>document.querySelector()</b></td>
+      <td>Selects the first element that matches a CSS selector.</td>
+      <td><code>document.querySelector(".container p")</code></td>
+    </tr>
+
+    <tr>
+      <td><b>document.querySelectorAll()</b></td>
+      <td>Returns all elements matching the given CSS selector (NodeList).</td>
+      <td><code>document.querySelectorAll("p.note")</code></td>
+    </tr>
+
+    <tr>
+      <td><b>document.forms</b></td>
+      <td>Returns all form elements in the document.</td>
+      <td><code>document.forms[0].elements["username"].value</code></td>
+    </tr>
+
+    <tr>
+      <td><b>document.images</b></td>
+      <td>Returns all <code>&lt;img&gt;</code> elements in the document.</td>
+      <td><code>document.images.length</code></td>
+    </tr>
+
+    <tr>
+      <td><b>document.links</b></td>
+      <td>Returns all hyperlinks (<code>&lt;a&gt;</code> tags with href).</td>
+      <td><code>document.links[0].href</code></td>
+    </tr>
+
+    <tr>
+      <td><b>document.scripts</b></td>
+      <td>Returns all <code>&lt;script&gt;</code> elements.</td>
+      <td><code>document.scripts</code></td>
+    </tr>
+
+    <tr>
+      <td><b>document.title</b></td>
+      <td>Access or modify the document title.</td>
+      <td><code>document.title = "New Title"</code></td>
+    </tr>
+
+  </table>
+
+  <hr>
+
+  <!-- ===================== SECTION 5 ===================== -->
+  <h2 id="section5">⚙️ JavaScript DOM Manipulation Methods</h2>
+
+  <table>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+
+    <tr>
+      <td><b>createElement()</b></td>
+      <td>Creates a new HTML element.</td>
+      <td><code>document.createElement("div")</code></td>
+    </tr>
+
+    <tr>
+      <td><b>createTextNode()</b></td>
+      <td>Creates a text node.</td>
+      <td><code>document.createTextNode("Hello")</code></td>
+    </tr>
+
+    <tr>
+      <td><b>appendChild()</b></td>
+      <td>Adds a new child node as the last child of an element.</td>
+      <td><code>parent.appendChild(child)</code></td>
+    </tr>
+
+    <tr>
+      <td><b>removeChild()</b></td>
+      <td>Removes a child node.</td>
+      <td><code>parent.removeChild(child)</code></td>
+    </tr>
+
+    <tr>
+      <td><b>replaceChild()</b></td>
+      <td>Replaces an old child with a new one.</td>
+      <td><code>parent.replaceChild(newNode, oldNode)</code></td>
+    </tr>
+
+    <tr>
+      <td><b>insertBefore()</b></td>
+      <td>Inserts a node before another specified child node.</td>
+      <td><code>parent.insertBefore(newNode, referenceNode)</code></td>
+    </tr>
+
+    <tr>
+      <td><b>cloneNode()</b></td>
+      <td>Clones a node (true = deep clone).</td>
+      <td><code>node.cloneNode(true)</code></td>
+    </tr>
+
+    <tr>
+      <td><b>setAttribute()</b></td>
+      <td>Sets a new attribute or modifies an existing one.</td>
+      <td><code>element.setAttribute("class", "active")</code></td>
+    </tr>
+
+    <tr>
+      <td><b>getAttribute()</b></td>
+      <td>Gets the value of an attribute.</td>
+      <td><code>element.getAttribute("id")</code></td>
+    </tr>
+
+    <tr>
+      <td><b>removeAttribute()</b></td>
+      <td>Removes an attribute.</td>
+      <td><code>element.removeAttribute("class")</code></td>
+    </tr>
+
+  </table>
+
+  <hr>
+
+  <!-- ===================== SECTION 6 ===================== -->
+   <h2 id="section6">🧠 JavaScript Event Handling Cheat Sheet</h2>
+
+  <table>
+    <tr>
+      <th>Event Type</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+
+    <tr>
+      <td><b>onclick</b></td>
+      <td>Fires when an element is clicked.</td>
+      <td><code>button.onclick = function() { alert("Clicked!"); }</code></td>
+    </tr>
+
+    <tr>
+      <td><b>onload</b></td>
+      <td>Triggered when a page or image is loaded.</td>
+      <td><code>window.onload = function() { console.log("Page Loaded"); }</code></td>
+    </tr>
+
+    <tr>
+      <td><b>onchange</b></td>
+      <td>Occurs when the value of an input element changes.</td>
+      <td><code>input.onchange = () => console.log("Changed");</code></td>
+    </tr>
+
+    <tr>
+      <td><b>onmouseover</b></td>
+      <td>Fires when mouse pointer moves over an element.</td>
+      <td><code>div.onmouseover = () => div.style.color = "blue";</code></td>
+    </tr>
+
+    <tr>
+      <td><b>onmouseout</b></td>
+      <td>Fires when mouse pointer leaves the element.</td>
+      <td><code>div.onmouseout = () => div.style.color = "black";</code></td>
+    </tr>
+
+    <tr>
+      <td><b>onkeydown</b></td>
+      <td>Triggered when a key is pressed down.</td>
+      <td><code>document.onkeydown = e => console.log(e.key);</code></td>
+    </tr>
+
+    <tr>
+      <td><b>onkeyup</b></td>
+      <td>Triggered when a key is released.</td>
+      <td><code>document.onkeyup = e => console.log(e.key);</code></td>
+    </tr>
+
+    <tr>
+      <td><b>addEventListener()</b></td>
+      <td>Registers an event handler for a specified event.</td>
+      <td><code>element.addEventListener("click", myFunction)</code></td>
+    </tr>
+
+    <tr>
+      <td><b>removeEventListener()</b></td>
+      <td>Removes an event handler.</td>
+      <td><code>element.removeEventListener("click", myFunction)</code></td>
+    </tr>
+
+  </table>
+
+  <hr>
+
+  <footer>
+    <p><b>End of Combined JavaScript Learning Reference</b></p>
+    <p>Compiled for educational purposes — all content preserved as originally provided.</p>
+  </footer>
+</body>
+</html>
