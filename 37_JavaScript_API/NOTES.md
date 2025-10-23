@@ -172,5 +172,5 @@ window.onload = function() {
 | Manage Window        | `window.open()`, `window.close()`, `window.dump()`, `window.scrollTo()` |
 | Run After Load       | `window.onload`                                                         |
 
----
+
 
