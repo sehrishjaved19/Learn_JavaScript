@@ -62,7 +62,7 @@ There are **two major types** of array methods in JavaScript:
 
 | Type                                | Description                                                  | Examples                                                                     |
 | ----------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| 🧩 **Non-Manipulating (Immutable)** | Don’t change the original array — they create a **new** one. | `map()`, `filter()`, `concat()`, `slice()`, `find()`, `reduce()`             |
+| 🧩 **Non-Manipulating (Immutable)** | Don’t change the original array — they create a **new** one. | `map()`, `filter()`, `concat()`, `slice()`, `find()`, `reduce()`, `Array.from()`             |
 | 🛠️ **Manipulating (Mutable)**      | Directly **change (mutate)** the original array.             | `push()`, `pop()`, `shift()`, `unshift()`, `splice()`, `sort()`, `reverse()` |
 
 ---
@@ -107,6 +107,7 @@ These do **not** change the original array — they return a **new array** or va
 | `slice()`   | Extracts part of an array                    | New array               |
 | `find()`    | Returns first element that matches condition | Single value            |
 | `forEach()` | Executes a function on each element          | `undefined` (no return) |
+| `Array.from()` | reates a new array from an array-like or iterable object.          | returns a new array |
 
 ---
 
@@ -148,6 +149,26 @@ fruits.forEach(fruit => console.log(fruit));
 ```
 
 ---
+
+### What is `Array.from()`?
+`Array.from()` is a **non-mutating method**. ✅
+
+`Array.from()` is a static method of the Array class that creates a new array from an array-like or iterable object.
+
+**Example:**
+
+```javascript
+const original = [1, 2, 3];
+const newArray = Array.from(original, x => x * 2);
+
+console.log(original); // [1, 2, 3] → unchanged
+console.log(newArray); // [2, 4, 6] → new array
+```
+
+So, **the original array is not manipulated**; a new array is created.
+
+---
+
 ### Key Point(difference between filter and find)
 
 | Method     | Purpose                                                                        |
