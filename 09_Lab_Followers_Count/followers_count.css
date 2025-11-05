@@ -1,0 +1,62 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+h1 {
+  color: #2a7ae2;
+  margin-bottom: 18px;
+}
+
+.follower-count {
+  font-size: 2.5em;
+  color: #1565c0;
+  margin: 18px 0;
+  font-weight: bold;
+}
+
+button {
+  background: #2a7ae2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 8px 0;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1d5bbf;
+}
+
+input[type='number'] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #cfd8dc;
+  font-size: 1em;
+  margin-bottom: 12px;
+  width: 80px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+}
