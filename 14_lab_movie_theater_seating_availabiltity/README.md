@@ -1,38 +1,37 @@
+# 🎟️ Movie Theater Seating Arrangement
 
-# Movie Theater Seating — Lab
+This mini project demonstrates how to manage and visualize a simple movie theater seating layout using **HTML, CSS, and JavaScript**.  
+It simulates seat booking both **manually** and through a **random seat selection** feature.
 
-An interactive demo that shows a movie-theater seating map where users can select available seats, see how many seats they've chosen, and view the total price. This lab demonstrates DOM manipulation, event handling, and simple state tracking in vanilla JavaScript.
+---
 
-## Files
+## 📁 Files Included
+- **index.html** — The main webpage displaying the seating grid and button controls.  
+- **style.css** — Defines the visual layout of seats, hover effects, and booked/available seat states.  
+- **script.js** — Contains all JavaScript logic for seat management, booking, and UI updates.
 
-- `index.html` — the page with the seating layout and summary UI.
-- `style.css` — styles for the seating grid and controls.
-- `script.js` — JavaScript behavior: seat selection, availability logic, and updating the display.
+---
 
-## How to run
+## ⚙️ Features
+* Displays a 3x3 grid representing theater seats (A1–C3).  
+* Each seat can be **booked manually** by clicking on it.  
+* A **random seat booking** button automatically selects one of the remaining available seats.  
+* Alerts the user when all seats are booked.  
+* Seat status updates visually — pink for available, red for booked.
 
-1. Open the folder `14_lab_movie_theater_seating_availabiltity` in your code editor.
-2. Open `index.html` in your browser:
+---
 
-	- Double-click `index.html`, or
-	- Use VS Code Live Server (recommended), or
-	- Run a simple local server from PowerShell
+## 🧠 What You Learn
+- Representing 2D data with **JavaScript arrays**.  
+- Handling **user interaction** through `onclick` events.  
+- Updating the **DOM dynamically** to reflect data changes.  
+- Using **conditional logic** to track state (booked/available).  
 
-## Usage
+---
 
-- Click (or tap) on available seats to select or deselect them.
-- Selected seats update the summary area (selected count and total price).
-- Some seats may be marked as unavailable/occupied — those cannot be selected.
+## 💡 Possible Improvements
+- Add seat pricing or categories (e.g., VIP, Regular).  
+- Show the number of remaining seats.  
+- Replace alerts with styled on-page notifications.
 
-If you want to change pricing or the seat map, edit `script.js` (or the HTML where the seats are generated).
 
-## Learning outcomes
-
-- Manipulating the DOM to create interactive UIs.
-- Handling user events (click/tap) and maintaining application state.
-- Using CSS to visually represent state (available, selected, occupied).
-
-## Troubleshooting
-
-- Nothing happens when clicking seats: open DevTools (F12) and check the console for JS errors.
-- Make sure `script.js` is correctly referenced in `index.html` and that the script tag is placed after the DOM elements it manipulates (usually at the end of the body).
