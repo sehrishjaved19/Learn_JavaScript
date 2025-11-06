@@ -1,106 +1,145 @@
-/* 🌐 General Reset & Base Style */
+/* 🌐 Global Reset & Base */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
 body {
-  background: #f5f7fa;
+  background: linear-gradient(180deg, #f6f9fc 0%, #eef3f8 100%);
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* 🌈 Header */
+/* 🌈 Header Section */
 header {
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: 3rem 1rem 2.5rem;
   background: linear-gradient(135deg, #007acc, #00bcd4);
   color: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 header h1 {
-  font-size: 2.2rem;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
 }
 
 header p {
-  font-size: 1rem;
-  color: #eaf7ff;
+  font-size: 1.05rem;
+  color: #e8faff;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* 🧱 Project Grid */
+/* 🧱 Grid Layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 1.8rem;
-  padding: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2.5rem 2rem;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* 🪄 Project Card */
 .card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 1.8rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 18px;
+  padding: 2rem 1.6rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+  transition: all 0.35s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid rgba(0, 122, 204, 0.08);
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 122, 204, 0.2);
 }
 
 .card h2 {
   color: #007acc;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .card p {
   color: #555;
   font-size: 0.95rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
+  line-height: 1.6;
 }
 
-/* 🔗 Button Style */
+/* 🔗 Button Styling */
 .card a {
   align-self: flex-start;
   background: linear-gradient(135deg, #007acc, #00bcd4);
   color: #fff;
   text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 500;
+  padding: 0.7rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
   transition: all 0.25s ease;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 8px rgba(0, 188, 212, 0.25);
 }
 
 .card a:hover {
-  background: linear-gradient(135deg, #0060a8, #0096a5);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #0064b4, #0098a9);
+  box-shadow: 0 6px 18px rgba(0, 188, 212, 0.35);
   transform: translateY(-2px);
+}
+
+/* 🌟 Subtle Hover Glow Effect */
+.card:hover h2 {
+  color: #005a99;
 }
 
 /* ⚙️ Footer */
 footer {
+  margin-top: auto;
   text-align: center;
   padding: 2rem 1rem;
-  background: #ffffff;
+  background: #fff;
   color: #666;
   font-size: 0.9rem;
-  border-top: 1px solid #e0e0e0;
-  margin-top: 3rem;
+  border-top: 1px solid #e2e2e2;
+  letter-spacing: 0.4px;
 }
 
 footer p {
-  letter-spacing: 0.3px;
+  opacity: 0.9;
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .card h2 {
+    font-size: 1.15rem;
+  }
 }
