@@ -1,0 +1,103 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: #f4f6fb;
+	margin: 0;
+	padding: 5% 15%;
+	min-height: 100vh;
+}
+
+h1, h2 {
+	text-align: center;
+	color: #2d3a4b;
+}
+
+form, .form-section {
+	max-width: 400px;
+	margin: 30px auto 10px auto;
+	background: #fff;
+	padding: 24px 32px 18px 32px;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+label {
+	font-weight: 500;
+	color: #34495e;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+	width: 100%;
+	padding: 8px 10px;
+	margin: 6px 0 16px 0;
+	border: 1px solid #bfc9d1;
+	border-radius: 5px;
+	font-size: 1rem;
+	background: #f9fafb;
+	transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+	border: 1.5px solid #5b9bd5;
+	outline: none;
+}
+
+button {
+	background: #5b9bd5;
+	color: #fff;
+	border: none;
+	padding: 10px 22px;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin-bottom: 10px;
+}
+
+button:hover {
+	background: #4177b6;
+}
+
+#books {
+	max-width: 600px;
+	margin: 0 auto 30px auto;
+}
+
+#books h1 {
+	font-size: 1.2rem;
+	color: #3a4a5d;
+	margin-bottom: 0.2em;
+	margin-top: 1.2em;
+}
+
+#books p {
+	margin: 0.2em 0 0.5em 0;
+	color: #444;
+	font-size: 1rem;
+}
+
+#books button {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	background: #f39c12;
+	color: #fff;
+	padding: 6px 16px;
+	font-size: 0.95rem;
+	border-radius: 4px;
+	border: none;
+	transition: background 0.2s;
+}
+
+#books button:hover {
+	background: #d35400;
+}
+
+@media (max-width: 700px) {
+	form, .form-section, #books {
+		max-width: 95vw;
+		padding: 10px;
+	}
+}
