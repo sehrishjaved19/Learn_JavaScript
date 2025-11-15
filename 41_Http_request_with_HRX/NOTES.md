@@ -79,15 +79,5 @@
 
 ---
 
-### **4️⃣ How it fits with Connect Burewala**
-
-For your project:
-
-* Use **XHR** (or Fetch API, which is modern and simpler) to request data like shops, transport info, or jobs from your server.
-* The server can respond with **JSON**, which you then render dynamically on the webpage.
-* This ensures your app **doesn’t reload every time** the user fetches new information.
-
----
-
 💡 **Tip:** For modern projects, many developers now prefer the **Fetch API** over XHR because it’s cleaner and Promise-based, but XHR is still widely used and important to understand.
 
