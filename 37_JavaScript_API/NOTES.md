@@ -37,15 +37,6 @@
 | **Update**     | PUT         | `api/customers/{id}` | Update customer data           |
 | **Delete**     | DELETE      | `api/customers/{id}` | Delete a customer              |
 
-🧾 Example **PUT** request body:
-
-```json
-{
-  "first_name": "Thomas",
-  "last_name": "Watson"
-}
-```
-
 ---
 
 ## 🧱 **Common JavaScript APIs**
@@ -65,16 +56,7 @@
 
 > A **JavaScript API** gives your script the ability to **connect and communicate** — either with the **browser (DOM/BOM)** or with **external web servers (REST APIs)**.
 
----
-
-Perfect — that’s a **detailed lesson on JavaScript DOM and Window APIs**, showing how JavaScript interacts with HTML elements and the browser window.
-
-Here’s a **structured, summarized, and easy-to-review version** of your text 👇
-
----
-
 # 📘 **JavaScript APIs – Working with DOM & Window Objects**
-
 
 ## 🧩 **1. Accessing HTML Elements (Nodes)**
 
