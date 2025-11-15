@@ -60,21 +60,21 @@
 
 * **Key Concepts:**
 
-  1. **Callbacks:**Callbacks are functions that are passed as arguments to other functions and are executed at a later time, typically when an asynchronous operation completes.
+  1. **Callbacks:** Callbacks are functions that are passed as arguments to other functions and are executed at a later time, typically when an asynchronous operation completes.
 
-  * They allow you to specify what should happen after the asynchronous task is done. 
+         * They allow you to specify what should happen after the asynchronous task is done. 
 
   2. **Promises:** Promises are objects that represent the eventual completion or failure of an asynchronous operation.
 
-  * They provide a cleaner and more structured way to work with asynchronous code compared to callbacks. 
+         * They provide a cleaner and more structured way to work with asynchronous code compared to callbacks. 
 
   3. **Async/Await:** A modern syntax to handle async code in a **more readable, synchronous-like manner**.
 
-  * It allows you to write asynchronous code in a more synchronous-looking style, making it easier to read and maintain.
+         * It allows you to write asynchronous code in a more synchronous-looking style, making it easier to read and maintain.
 
   4. **Event Loop:** JavaScript mechanism that manages async tasks and ensures they run when ready.
   
-  * The event loop continuously checks the message queue for tasks that need to be executed, and runs them in the order they were added.
+         * The event loop continuously checks the message queue for tasks that need to be executed, and runs them in the order they were added.
 
 * **Example using `setTimeout`:**
 
